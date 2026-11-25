@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Pixel Pond Online</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="join-screen" class="overlay"><div class="join-card"><div class="logo">🎣 PIXEL POND</div><p class="subtitle">ONLINE FISHING WORLD</p><label>Nama pemain</label><input id="name-input" maxlength="16" value="Angler" autocomplete="nickname"><label>Room</label><input id="room-input" maxlength="20" value="pond-1"><button id="join-btn" class="primary">MASUK KE POND</button><small>Hingga 30 pemain dalam satu room</small><div id="join-error"></div></div></div>
+<header class="topbar"><div class="brand">🎣 PIXEL POND <span>ONLINE</span></div><div class="stats"><span id="coins">🪙 0</span><span id="level">LV 1</span><span id="player-count">1/30 ONLINE</span></div></header>
+<main><section class="game-wrap"><canvas id="game" width="960" height="600" aria-label="Game fishing"></canvas><div class="hint" id="hint">WASD / panah untuk bergerak • Dekati air lalu tekan SPACE untuk memancing</div><div class="mobile-controls"><button data-dir="up">▲</button><div><button data-dir="left">◀</button><button data-dir="down">▼</button><button data-dir="right">▶</button></div><button id="mobile-fish">🎣</button></div></section>
+<aside class="side"><div class="panel"><h3>🎒 HASIL PANCING</h3><div id="catch-result">Belum ada ikan. Coba lempar kailmu!</div><div class="mini-stats"><span>Ikan <b id="fish-count">0</b></span><span>Level <b id="level-side">1</b></span></div><button id="fish-btn" class="primary">LEMPAR KAIL · SPACE</button></div><div class="panel"><h3>💬 CHAT POND</h3><div id="chat-log" class="chat-log"><p class="system">Selamat datang di Pixel Pond!</p></div><form id="chat-form"><input id="chat-input" maxlength="120" placeholder="Tulis pesan..."><button>➤</button></form></div><div class="panel online-panel"><h3>🧑‍🤝‍🧑 PEMAIN ONLINE</h3><div id="player-list">Menghubungkan...</div></div></aside></main>
+<footer>Room: <b id="room-label">pond-1</b> · Bagikan URL ini agar temanmu bisa bergabung ke room yang sama.</footer>
+<script src="/socket.io/socket.io.js"></script><script src="/game.js"></script>
+</body></html>

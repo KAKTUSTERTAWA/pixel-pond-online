@@ -1,0 +1,10 @@
+{
+  "name": "pixel-pond-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Top-down real-time multiplayer fishing game starter for 10-30 players",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "dev": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.21.2", "socket.io": "^4.8.1" }
+}
